@@ -56,11 +56,11 @@ public class SeedModifier {
 			istream.close();
 
 			System.out.println("[SeedModifier] Changing seed");
-			minecraftProperties.setProperty("seed", new Random().nextLong() + "");
+			minecraftProperties.setProperty("seed", seed);
 
 			System.out.println("[SeedModifier] Writing changes");
 			FileOutputStream ostream = new FileOutputStream(propertiesFile);
-			minecraftProperties.store(ostream, "Seed modified by seed modifier");
+			minecraftProperties.store(ostream, "Minecraft server properties");
 			ostream.close();
 		} catch (IOException e) {
 			System.err.println("[SeedModifier] An error occurred");
