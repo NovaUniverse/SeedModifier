@@ -56,7 +56,7 @@ public class SeedModifier {
 			istream.close();
 
 			System.out.println("[SeedModifier] Changing seed");
-			minecraftProperties.setProperty("seed", seed);
+			minecraftProperties.setProperty("level-seed", seed);
 
 			System.out.println("[SeedModifier] Writing changes");
 			FileOutputStream ostream = new FileOutputStream(propertiesFile);
